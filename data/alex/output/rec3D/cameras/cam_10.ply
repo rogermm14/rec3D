@@ -1,0 +1,23 @@
+ply
+format ascii 1.0
+comment TextureFile cam_10.jpg
+element vertex 4
+property float x
+property float y
+property float z
+property float nx
+property float ny
+property float nz
+property uchar red
+property uchar green
+property uchar blue
+property float texture_u
+property float texture_v
+element face 1
+property list uchar int vertex_indices
+end_header
+0.608492 0.0458946 0.329703 0.877303 0.0661693 0.475354 255 255 255 0 0
+0.730043 0.0459233 0.41035 0.870421 0.0547538 0.489255 255 255 255 1 0
+0.730188 -0.148573 0.410201 0.858443 -0.174669 0.482252 255 255 255 1 1
+0.608636 -0.148601 0.329554 0.859774 -0.209918 0.465536 255 255 255 0 1
+4 0 1 2 3
