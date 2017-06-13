@@ -1,0 +1,1684 @@
+Starting 3D reconstruction ...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Resizing input images %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Resizing input images...
+ 
+Resizing image  00.JPG  (exif data found)
+Resizing image  01.JPG  (exif data found)
+Resizing image  02.JPG  (exif data found)
+Resizing image  03.JPG  (exif data found)
+Resizing image  04.JPG  (exif data found)
+Resizing image  05.JPG  (exif data found)
+Resizing image  06.JPG  (exif data found)
+Resizing image  07.JPG  (exif data found)
+Resizing image  08.JPG  (exif data found)
+Resizing image  09.JPG  (exif data found)
+Resizing image  10.JPG  (exif data found)
+Resizing image  11.JPG  (exif data found)
+Resizing image  12.JPG  (exif data found)
+Resizing image  13.JPG  (exif data found)
+Resizing image  14.JPG  (exif data found)
+Resizing image  15.JPG  (exif data found)
+Resizing image  16.JPG  (exif data found)
+Resizing image  17.JPG  (exif data found)
+Resizing image  18.JPG  (exif data found)
+Resizing image  19.JPG  (exif data found)
+Resizing image  20.JPG  (exif data found)
+Resizing image  21.JPG  (exif data found)
+Resizing image  22.JPG  (exif data found)
+Resizing image  23.JPG  (exif data found)
+Resizing image  24.JPG  (exif data found)
+Resizing image  25.JPG  (exif data found)
+Resizing image  26.JPG  (exif data found)
+Resizing image  27.JPG  (exif data found)
+Resizing image  28.JPG  (exif data found)
+Resizing image  29.JPG  (exif data found)
+Resizing image  30.JPG  (exif data found)
+Resizing image  31.JPG  (exif data found)
+Resizing image  32.JPG  (exif data found)
+Resizing image  33.JPG  (exif data found)
+Resizing image  34.JPG  (exif data found)
+Resizing image  35.JPG  (exif data found)
+Resizing image  36.JPG  (exif data found)
+Resizing image  37.JPG  (exif data found)
+
+Resizing images completed in  5.4594399929  (s)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% SfM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Input dir  : /home/usuario/TFG_Data/indian/output/resize
+Output_dir : /home/usuario/TFG_Data/indian/output/openmvg
+
+Input parameters:
+	SfM method              : global
+	Describer method        : AKAZE_FLOAT
+	Describer search        : ULTRA
+	Matching method         : FASTCASCADEHASHINGL2
+	Geometric model         : ESSENTIAL
+
+1. Intrinsics analysis
+ You called : 
+/home/usuario/openMVG_Build/Linux-x86_64-RELEASE/openMVG_main_SfMInit_ImageListing
+--imageDirectory /home/usuario/TFG_Data/indian/output/resize
+--sensorWidthDatabase /home/usuario/openMVG/src/openMVG/exif/sensor_width_database/sensor_width_camera_database.txt
+--outputDirectory /home/usuario/TFG_Data/indian/output/openmvg/matches
+--focal -1
+--intrinsics 
+--camera_model 3
+--group_camera_model 1
+
+- Image listing -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+SfMInit_ImageListing report:
+listed #File(s): 38
+usable #File(s) listed in sfm_data: 38
+usable #Intrinsic(s) listed in sfm_data: 1
+
+2. Compute features
+ You called : 
+/home/usuario/openMVG_Build/Linux-x86_64-RELEASE/openMVG_main_ComputeFeatures
+--input_file /home/usuario/TFG_Data/indian/output/openmvg/matches/sfm_data.json
+--outdir /home/usuario/TFG_Data/indian/output/openmvg/matches
+--describerMethod AKAZE_FLOAT
+--upright 0
+--describerPreset ULTRA
+--force 0
+--writeFiles 1
+--numThreads 8
+
+-----> Using OPENMP: 4 threads
+
+- EXTRACT FEATURES -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+
+ features: 4006
+*
+ features: 4954
+*
+ features: 4798
+*
+ features: 4364
+**
+ features: 4044
+*
+ features: 4035
+*
+ features: 4885
+**
+ features: 5116
+*
+ features: 5011
+*
+ features: 6389
+**
+ features: 6310
+*
+ features: 6788
+*
+ features: 6517
+**
+ features: 7172
+*
+ features: 7526
+*
+ features: 7431
+**
+ features: 7431
+*
+ features: 7106
+*
+ features: 6973
+**
+ features: 7049
+*
+ features: 6880
+*
+ features: 7166
+*
+ features: 6998
+**
+ features: 6439
+*
+ features: 5867
+*
+ features: 6360
+**
+ features: 5766
+*
+ features: 4205
+*
+ features: 4653
+**
+ features: 4463
+*
+ features: 5681
+*
+ features: 5615
+**
+ features: 5643
+*
+ features: 6131
+*
+ features: 6145
+**
+ features: 6082
+*
+ features: 5466
+*
+ features: 5284
+***
+Average number of features per image is 5861.82
+Task done in (s): 20.666
+
+3. Compute matches
+ You called : 
+/home/usuario/openMVG_Build/Linux-x86_64-RELEASE/openMVG_main_ComputeMatches
+--input_file /home/usuario/TFG_Data/indian/output/openmvg/matches/sfm_data.json
+--out_dir /home/usuario/TFG_Data/indian/output/openmvg/matches
+Optional parameters:
+--force 0
+--ratio 0.8
+--geometric_model e
+--video_mode_matching -1
+--pair_list 
+--nearest_matching_method FASTCASCADEHASHINGL2
+--guided_matching 0
+--cache_size unlimited
+--writeFiles 1
+
+- Regions Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+ - PUTATIVE MATCHES - 
+Use: exhaustive pairwise matching
+Using FAST_CASCADE_HASHING_L2 matcher
+Using the OPENMP thread interface
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+ matches(1,2): 1130
+ matches(1,3): 632
+ matches(1,4): 405
+ matches(1,5): 301
+ matches(1,6): 264
+ matches(1,7): 240
+ matches(1,8): 279
+ matches(1,9): 279
+ matches(1,10): 304
+ matches(1,11): 279
+ matches(1,12): 287
+ matches(1,13): 273
+ matches(1,14): 275
+ matches(1,15): 266
+ matches(1,16): 320
+ matches(1,17): 312
+ matches(1,18): 306
+ matches(1,19): 325
+ matches(1,20): 310
+ matches(1,21): 270
+ matches(1,22): 268
+ matches(1,23): 230
+ matches(1,24): 233
+ matches(1,25): 251
+ matches(1,26): 260
+ matches(1,27): 303
+ matches(1,28): 1055
+ matches(1,29): 527
+ matches(1,30): 265
+ matches(1,31): 202
+ matches(1,32): 237
+ matches(1,33): 219
+ matches(1,34): 211
+ matches(1,35): 207
+ matches(1,36): 198
+ matches(1,37): 206
+ matches(1,38): 1047
+ matches(2,3): 930
+ matches(2,4): 524
+ matches(2,5): 353
+ matches(2,6): 305
+ matches(2,7): 259
+ matches(2,8): 292
+ matches(2,9): 269
+ matches(2,10): 298
+ matches(2,11): 310
+ matches(2,12): 286
+ matches(2,13): 257
+ matches(2,14): 282
+ matches(2,15): 318
+ matches(2,16): 325
+ matches(2,17): 291
+ matches(2,18): 310
+ matches(2,19): 325
+ matches(2,20): 344
+ matches(2,21): 260
+ matches(2,22): 261
+ matches(2,23): 255
+ matches(2,24): 258
+ matches(2,25): 252
+ matches(2,26): 255
+ matches(2,27): 277
+ matches(2,28): 609
+ matches(2,29): 397
+ matches(2,30): 273
+ matches(2,31): 230
+ matches(2,32): 224
+ matches(2,33): 205
+ matches(2,34): 223
+ matches(2,35): 230
+ matches(2,36): 235
+ matches(2,37): 210
+ matches(2,38): 643
+ matches(3,4): 982
+ matches(3,5): 557
+ matches(3,6): 427
+ matches(3,7): 262
+ matches(3,8): 256
+ matches(3,9): 255
+ matches(3,10): 279
+ matches(3,11): 267
+ matches(3,12): 272
+ matches(3,13): 276
+ matches(3,14): 253
+ matches(3,15): 281
+ matches(3,16): 315
+ matches(3,17): 275
+ matches(3,18): 290
+ matches(3,19): 310
+ matches(3,20): 305
+ matches(3,21): 274
+ matches(3,22): 279
+ matches(3,23): 256
+ matches(3,24): 232
+ matches(3,25): 245
+ matches(3,26): 234
+ matches(3,27): 256
+ matches(3,28): 392
+ matches(3,29): 307
+ matches(3,30): 218
+ matches(3,31): 225
+ matches(3,32): 226
+ matches(3,33): 222
+ matches(3,34): 223
+ matches(3,35): 210
+ matches(3,36): 217
+ matches(3,37): 200
+ matches(3,38): 390
+ matches(4,5): 829
+ matches(4,6): 540
+ matches(4,7): 321
+ matches(4,8): 279
+ matches(4,9): 244
+ matches(4,10): 277
+ matches(4,11): 277
+ matches(4,12): 275
+ matches(4,13): 273
+ matches(4,14): 258
+ matches(4,15): 278
+ matches(4,16): 293
+ matches(4,17): 284
+ matches(4,18): 284
+ matches(4,19): 287
+ matches(4,20): 289
+ matches(4,21): 260
+ matches(4,22): 332
+ matches(4,23): 256
+ matches(4,24): 264
+ matches(4,25): 259
+ matches(4,26): 225
+ matches(4,27): 262
+ matches(4,28): 302
+ matches(4,29): 244
+ matches(4,30): 221
+ matches(4,31): 229
+ matches(4,32): 206
+ matches(4,33): 207
+ matches(4,34): 239
+ matches(4,35): 218
+ matches(4,36): 217
+ matches(4,37): 213
+ matches(4,38): 320
+ matches(5,6): 1010
+ matches(5,7): 408
+ matches(5,8): 295
+ matches(5,9): 246
+ matches(5,10): 302
+ matches(5,11): 310
+ matches(5,12): 295
+ matches(5,13): 265
+ matches(5,14): 271
+ matches(5,15): 303
+ matches(5,16): 309
+ matches(5,17): 315
+ matches(5,18): 294
+ matches(5,19): 289
+ matches(5,20): 277
+ matches(5,21): 262
+ matches(5,22): 301
+ matches(5,23): 302
+ matches(5,24): 261
+ matches(5,25): 242
+ matches(5,26): 266
+ matches(5,27): 262
+ matches(5,28): 238
+ matches(5,29): 249
+ matches(5,30): 204
+ matches(5,31): 208
+ matches(5,32): 204
+ matches(5,33): 227
+ matches(5,34): 231
+ matches(5,35): 210
+ matches(5,36): 230
+ matches(5,37): 194
+ matches(5,38): 242
+ matches(6,7): 470
+ matches(6,8): 305
+ matches(6,9): 285
+ matches(6,10): 304
+ matches(6,11): 321
+ matches(6,12): 316
+ matches(6,13): 270
+ matches(6,14): 287
+ matches(6,15): 300
+ matches(6,16): 321
+ matches(6,17): 325
+ matches(6,18): 306
+ matches(6,19): 285
+ matches(6,20): 292
+ matches(6,21): 297
+ matches(6,22): 325
+ matches(6,23): 267
+ matches(6,24): 252
+ matches(6,25): 232
+ matches(6,26): 250
+ matches(6,27): 258
+ matches(6,28): 196
+ matches(6,29): 230
+ matches(6,30): 165
+ matches(6,31): 218
+ matches(6,32): 221
+ matches(6,33): 209
+ matches(6,34): 227
+ matches(6,35): 216
+ matches(6,36): 223
+ matches(6,37): 210
+ matches(6,38): 227
+ matches(7,8): 387
+ matches(7,9): 344
+ matches(7,10): 310
+ matches(7,11): 319
+ matches(7,12): 300
+ matches(7,13): 299
+ matches(7,14): 270
+ matches(7,15): 288
+ matches(7,16): 327
+ matches(7,17): 309
+ matches(7,18): 285
+ matches(7,19): 302
+ matches(7,20): 304
+ matches(7,21): 282
+ matches(7,22): 310
+ matches(7,23): 274
+ matches(7,24): 295
+ matches(7,25): 262
+ matches(7,26): 264
+ matches(7,27): 256
+ matches(7,28): 213
+ matches(7,29): 198
+ matches(7,30): 203
+ matches(7,31): 236
+ matches(7,32): 240
+ matches(7,33): 202
+ matches(7,34): 256
+ matches(7,35): 212
+ matches(7,36): 271
+ matches(7,37): 216
+ matches(7,38): 228
+ matches(8,9): 799
+ matches(8,10): 583
+ matches(8,11): 442
+ matches(8,12): 415
+ matches(8,13): 389
+ matches(8,14): 312
+ matches(8,15): 311
+ matches(8,16): 371
+ matches(8,17): 327
+ matches(8,18): 309
+ matches(8,19): 313
+ matches(8,20): 335
+ matches(8,21): 277
+ matches(8,22): 283
+ matches(8,23): 254
+ matches(8,24): 242
+ matches(8,25): 265
+ matches(8,26): 271
+ matches(8,27): 298
+ matches(8,28): 252
+ matches(8,29): 251
+ matches(8,30): 200
+ matches(8,31): 265
+ matches(8,32): 234
+ matches(8,33): 246
+ matches(8,34): 249
+ matches(8,35): 209
+ matches(8,36): 243
+ matches(8,37): 197
+ matches(8,38): 249
+ matches(9,10): 951
+ matches(9,11): 578
+ matches(9,12): 465
+ matches(9,13): 415
+ matches(9,14): 382
+ matches(9,15): 346
+ matches(9,16): 400
+ matches(9,17): 357
+ matches(9,18): 336
+ matches(9,19): 349
+ matches(9,20): 364
+ matches(9,21): 285
+ matches(9,22): 329
+ matches(9,23): 288
+ matches(9,24): 245
+ matches(9,25): 286
+ matches(9,26): 265
+ matches(9,27): 278
+ matches(9,28): 213
+ matches(9,29): 229
+ matches(9,30): 203
+ matches(9,31): 264
+ matches(9,32): 275
+ matches(9,33): 269
+ matches(9,34): 261
+ matches(9,35): 228
+ matches(9,36): 262
+ matches(9,37): 224
+ matches(9,38): 289
+ matches(10,11): 1148
+ matches(10,12): 633
+ matches(10,13): 432
+ matches(10,14): 498
+ matches(10,15): 476
+ matches(10,16): 360
+ matches(10,17): 309
+ matches(10,18): 317
+ matches(10,19): 301
+ matches(10,20): 276
+ matches(10,21): 269
+ matches(10,22): 259
+ matches(10,23): 236
+ matches(10,24): 254
+ matches(10,25): 251
+ matches(10,26): 253
+ matches(10,27): 257
+ matches(10,28): 217
+ matches(10,29): 198
+ matches(10,30): 186
+ matches(10,31): 253
+ matches(10,32): 256
+ matches(10,33): 232
+ matches(10,34): 212
+ matches(10,35): 216
+ matches(10,36): 214
+ matches(10,37): 183
+ matches(10,38): 237
+ matches(11,12): 1024
+ matches(11,13): 606
+ matches(11,14): 422
+ matches(11,15): 541
+ matches(11,16): 610
+ matches(11,17): 349
+ matches(11,18): 316
+ matches(11,19): 280
+ matches(11,20): 322
+ matches(11,21): 239
+ matches(11,22): 258
+ matches(11,23): 232
+ matches(11,24): 201
+ matches(11,25): 215
+ matches(11,26): 230
+ matches(11,27): 239
+ matches(11,28): 195
+ matches(11,29): 192
+ matches(11,30): 162
+ matches(11,31): 268
+ matches(11,32): 261
+ matches(11,33): 226
+ matches(11,34): 218
+ matches(11,35): 214
+ matches(11,36): 225
+ matches(11,37): 194
+ matches(11,38): 246
+ matches(12,13): 1478
+ matches(12,14): 685
+ matches(12,15): 519
+ matches(12,16): 452
+ matches(12,17): 369
+ matches(12,18): 321
+ matches(12,19): 307
+ matches(12,20): 327
+ matches(12,21): 233
+ matches(12,22): 262
+ matches(12,23): 217
+ matches(12,24): 201
+ matches(12,25): 240
+ matches(12,26): 258
+ matches(12,27): 244
+ matches(12,28): 190
+ matches(12,29): 203
+ matches(12,30): 179
+ matches(12,31): 371
+ matches(12,32): 276
+ matches(12,33): 238
+ matches(12,34): 215
+ matches(12,35): 183
+ matches(12,36): 212
+ matches(12,37): 181
+ matches(12,38): 229
+ matches(13,14): 1133
+ matches(13,15): 760
+ matches(13,16): 489
+ matches(13,17): 347
+ matches(13,18): 368
+ matches(13,19): 340
+ matches(13,20): 317
+ matches(13,21): 264
+ matches(13,22): 277
+ matches(13,23): 258
+ matches(13,24): 213
+ matches(13,25): 231
+ matches(13,26): 228
+ matches(13,27): 239
+ matches(13,28): 204
+ matches(13,29): 200
+ matches(13,30): 197
+ matches(13,31): 331
+ matches(13,32): 308
+ matches(13,33): 242
+ matches(13,34): 245
+ matches(13,35): 219
+ matches(13,36): 202
+ matches(13,37): 180
+ matches(13,38): 245
+ matches(14,15): 2018
+ matches(14,16): 773
+ matches(14,17): 455
+ matches(14,18): 427
+ matches(14,19): 402
+ matches(14,20): 416
+ matches(14,21): 264
+ matches(14,22): 274
+ matches(14,23): 243
+ matches(14,24): 208
+ matches(14,25): 206
+ matches(14,26): 239
+ matches(14,27): 252
+ matches(14,28): 181
+ matches(14,29): 200
+ matches(14,30): 199
+ matches(14,31): 290
+ matches(14,32): 380
+ matches(14,33): 254
+ matches(14,34): 239
+ matches(14,35): 199
+ matches(14,36): 218
+ matches(14,37): 196
+ matches(14,38): 215
+ matches(15,16): 1478
+ matches(15,17): 593
+ matches(15,18): 482
+ matches(15,19): 405
+ matches(15,20): 392
+ matches(15,21): 263
+ matches(15,22): 278
+ matches(15,23): 231
+ matches(15,24): 221
+ matches(15,25): 221
+ matches(15,26): 227
+ matches(15,27): 240
+ matches(15,28): 191
+ matches(15,29): 189
+ matches(15,30): 192
+ matches(15,31): 327
+ matches(15,32): 475
+ matches(15,33): 298
+ matches(15,34): 262
+ matches(15,35): 227
+ matches(15,36): 221
+ matches(15,37): 213
+ matches(15,38): 200
+ matches(16,17): 1251
+ matches(16,18): 758
+ matches(16,19): 554
+ matches(16,20): 474
+ matches(16,21): 344
+ matches(16,22): 334
+ matches(16,23): 250
+ matches(16,24): 266
+ matches(16,25): 215
+ matches(16,26): 248
+ matches(16,27): 270
+ matches(16,28): 179
+ matches(16,29): 210
+ matches(16,30): 178
+ matches(16,31): 260
+ matches(16,32): 427
+ matches(16,33): 343
+ matches(16,34): 283
+ matches(16,35): 242
+ matches(16,36): 254
+ matches(16,37): 216
+ matches(16,38): 263
+ matches(17,18): 2030
+ matches(17,19): 1346
+ matches(17,20): 825
+ matches(17,21): 443
+ matches(17,22): 422
+ matches(17,23): 315
+ matches(17,24): 274
+ matches(17,25): 219
+ matches(17,26): 260
+ matches(17,27): 228
+ matches(17,28): 205
+ matches(17,29): 202
+ matches(17,30): 179
+ matches(17,31): 248
+ matches(17,32): 367
+ matches(17,33): 365
+ matches(17,34): 378
+ matches(17,35): 307
+ matches(17,36): 274
+ matches(17,37): 213
+ matches(17,38): 243
+ matches(18,19): 2036
+ matches(18,20): 1355
+ matches(18,21): 608
+ matches(18,22): 555
+ matches(18,23): 376
+ matches(18,24): 317
+ matches(18,25): 268
+ matches(18,26): 243
+ matches(18,27): 242
+ matches(18,28): 219
+ matches(18,29): 195
+ matches(18,30): 164
+ matches(18,31): 197
+ matches(18,32): 325
+ matches(18,33): 341
+ matches(18,34): 393
+ matches(18,35): 335
+ matches(18,36): 276
+ matches(18,37): 231
+ matches(18,38): 243
+ matches(19,20): 1945
+ matches(19,21): 823
+ matches(19,22): 685
+ matches(19,23): 451
+ matches(19,24): 378
+ matches(19,25): 306
+ matches(19,26): 263
+ matches(19,27): 258
+ matches(19,28): 193
+ matches(19,29): 216
+ matches(19,30): 187
+ matches(19,31): 215
+ matches(19,32): 276
+ matches(19,33): 322
+ matches(19,34): 406
+ matches(19,35): 353
+ matches(19,36): 337
+ matches(19,37): 219
+ matches(19,38): 227
+ matches(20,21): 1112
+ matches(20,22): 858
+ matches(20,23): 659
+ matches(20,24): 461
+ matches(20,25): 315
+ matches(20,26): 276
+ matches(20,27): 251
+ matches(20,28): 202
+ matches(20,29): 216
+ matches(20,30): 196
+ matches(20,31): 228
+ matches(20,32): 306
+ matches(20,33): 301
+ matches(20,34): 336
+ matches(20,35): 351
+ matches(20,36): 322
+ matches(20,37): 237
+ matches(20,38): 227
+ matches(21,22): 2004
+ matches(21,23): 906
+ matches(21,24): 580
+ matches(21,25): 392
+ matches(21,26): 271
+ matches(21,27): 249
+ matches(21,28): 177
+ matches(21,29): 226
+ matches(21,30): 199
+ matches(21,31): 209
+ matches(21,32): 242
+ matches(21,33): 282
+ matches(21,34): 330
+ matches(21,35): 383
+ matches(21,36): 326
+ matches(21,37): 228
+ matches(21,38): 202
+ matches(22,23): 1304
+ matches(22,24): 776
+ matches(22,25): 455
+ matches(22,26): 295
+ matches(22,27): 265
+ matches(22,28): 171
+ matches(22,29): 202
+ matches(22,30): 193
+ matches(22,31): 221
+ matches(22,32): 233
+ matches(22,33): 273
+ matches(22,34): 304
+ matches(22,35): 372
+ matches(22,36): 388
+ matches(22,37): 284
+ matches(22,38): 192
+ matches(23,24): 1663
+ matches(23,25): 682
+ matches(23,26): 376
+ matches(23,27): 281
+ matches(23,28): 181
+ matches(23,29): 213
+ matches(23,30): 220
+ matches(23,31): 210
+ matches(23,32): 209
+ matches(23,33): 237
+ matches(23,34): 305
+ matches(23,35): 321
+ matches(23,36): 467
+ matches(23,37): 412
+ matches(23,38): 218
+ matches(24,25): 1125
+ matches(24,26): 442
+ matches(24,27): 343
+ matches(24,28): 159
+ matches(24,29): 189
+ matches(24,30): 218
+ matches(24,31): 195
+ matches(24,32): 220
+ matches(24,33): 248
+ matches(24,34): 257
+ matches(24,35): 273
+ matches(24,36): 391
+ matches(24,37): 458
+ matches(24,38): 203
+ matches(25,26): 576
+ matches(25,27): 425
+ matches(25,28): 166
+ matches(25,29): 203
+ matches(25,30): 257
+ matches(25,31): 181
+ matches(25,32): 223
+ matches(25,33): 215
+ matches(25,34): 218
+ matches(25,35): 205
+ matches(25,36): 254
+ matches(25,37): 378
+ matches(25,38): 209
+ matches(26,27): 1297
+ matches(26,28): 229
+ matches(26,29): 264
+ matches(26,30): 410
+ matches(26,31): 220
+ matches(26,32): 233
+ matches(26,33): 187
+ matches(26,34): 216
+ matches(26,35): 243
+ matches(26,36): 293
+ matches(26,37): 363
+ matches(26,38): 274
+ matches(27,28): 241
+ matches(27,29): 322
+ matches(27,30): 661
+ matches(27,31): 208
+ matches(27,32): 218
+ matches(27,33): 209
+ matches(27,34): 228
+ matches(27,35): 209
+ matches(27,36): 219
+ matches(27,37): 278
+ matches(27,38): 311
+ matches(28,29): 760
+ matches(28,30): 322
+ matches(28,31): 259
+ matches(28,32): 238
+ matches(28,33): 250
+ matches(28,34): 234
+ matches(28,35): 249
+ matches(28,36): 235
+ matches(28,37): 240
+ matches(28,38): 1274
+ matches(29,30): 518
+ matches(29,31): 256
+ matches(29,32): 260
+ matches(29,33): 221
+ matches(29,34): 270
+ matches(29,35): 226
+ matches(29,36): 236
+ matches(29,37): 226
+ matches(29,38): 844
+ matches(30,31): 207
+ matches(30,32): 232
+ matches(30,33): 215
+ matches(30,34): 236
+ matches(30,35): 209
+ matches(30,36): 248
+ matches(30,37): 272
+ matches(30,38): 369
+ matches(31,32): 575
+ matches(31,33): 369
+ matches(31,34): 321
+ matches(31,35): 243
+ matches(31,36): 197
+ matches(31,37): 168
+ matches(31,38): 183
+ matches(32,33): 949
+ matches(32,34): 534
+ matches(32,35): 299
+ matches(32,36): 241
+ matches(32,37): 220
+ matches(32,38): 197
+ matches(33,34): 1081
+ matches(33,35): 544
+ matches(33,36): 367
+ matches(33,37): 253
+ matches(33,38): 210
+ matches(34,35): 1095
+ matches(34,36): 550
+ matches(34,37): 305
+ matches(34,38): 208
+ matches(35,36): 1000
+ matches(35,37): 384
+ matches(35,38): 212
+ matches(36,37): 755
+ matches(36,38): 208
+ matches(37,38): 213
+Task (Regions Matching) done in (s): 11.754
+
+ - Geometric filtering - 
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 32.411
+
+ Export Adjacency Matrix of the pairwise's geometric matches
+ matches(1,2): 820
+ matches(1,3): 376
+ matches(1,4): 173
+ matches(1,5): 93
+ matches(1,27): 94
+ matches(1,28): 825
+ matches(1,29): 280
+ matches(1,30): 98
+ matches(1,38): 768
+ matches(2,3): 593
+ matches(2,4): 274
+ matches(2,5): 137
+ matches(2,28): 361
+ matches(2,29): 148
+ matches(2,38): 340
+ matches(3,4): 735
+ matches(3,5): 327
+ matches(3,6): 187
+ matches(3,28): 158
+ matches(3,38): 127
+ matches(4,5): 566
+ matches(4,6): 290
+ matches(5,6): 763
+ matches(5,7): 173
+ matches(6,7): 196
+ matches(8,9): 426
+ matches(8,10): 201
+ matches(9,10): 505
+ matches(9,11): 224
+ matches(10,11): 772
+ matches(10,12): 273
+ matches(10,13): 133
+ matches(10,15): 150
+ matches(11,12): 692
+ matches(11,13): 265
+ matches(11,15): 193
+ matches(11,16): 220
+ matches(12,13): 1144
+ matches(12,14): 356
+ matches(12,15): 217
+ matches(12,16): 143
+ matches(12,31): 140
+ matches(13,14): 793
+ matches(13,15): 419
+ matches(13,16): 169
+ matches(13,31): 113
+ matches(14,15): 1534
+ matches(14,16): 452
+ matches(14,17): 180
+ matches(14,19): 131
+ matches(14,32): 160
+ matches(15,16): 1081
+ matches(15,17): 294
+ matches(15,18): 172
+ matches(15,19): 129
+ matches(15,32): 236
+ matches(16,17): 935
+ matches(16,18): 435
+ matches(16,19): 272
+ matches(16,20): 173
+ matches(16,32): 190
+ matches(16,33): 115
+ matches(17,18): 1282
+ matches(17,19): 867
+ matches(17,20): 517
+ matches(17,21): 207
+ matches(17,22): 172
+ matches(17,23): 95
+ matches(17,32): 150
+ matches(17,33): 157
+ matches(17,34): 137
+ matches(17,35): 112
+ matches(18,19): 1370
+ matches(18,20): 1015
+ matches(18,21): 356
+ matches(18,22): 296
+ matches(18,23): 134
+ matches(18,24): 110
+ matches(18,32): 103
+ matches(18,33): 137
+ matches(18,34): 133
+ matches(18,35): 108
+ matches(19,20): 1292
+ matches(19,21): 430
+ matches(19,22): 359
+ matches(19,23): 138
+ matches(19,33): 120
+ matches(19,34): 161
+ matches(19,35): 140
+ matches(20,21): 654
+ matches(20,22): 447
+ matches(20,23): 346
+ matches(20,24): 170
+ matches(20,34): 128
+ matches(20,35): 110
+ matches(21,22): 1324
+ matches(21,23): 509
+ matches(21,24): 283
+ matches(21,25): 126
+ matches(21,35): 135
+ matches(22,23): 1049
+ matches(22,24): 415
+ matches(22,25): 221
+ matches(22,35): 165
+ matches(22,36): 159
+ matches(22,37): 89
+ matches(23,24): 1078
+ matches(23,25): 374
+ matches(23,35): 113
+ matches(23,36): 213
+ matches(23,37): 189
+ matches(24,25): 724
+ matches(24,26): 200
+ matches(24,36): 127
+ matches(24,37): 232
+ matches(25,26): 331
+ matches(25,27): 199
+ matches(25,37): 148
+ matches(26,27): 924
+ matches(26,30): 228
+ matches(26,37): 152
+ matches(27,29): 134
+ matches(27,30): 480
+ matches(27,37): 94
+ matches(27,38): 111
+ matches(28,29): 499
+ matches(28,30): 127
+ matches(28,38): 979
+ matches(29,30): 282
+ matches(29,38): 526
+ matches(30,37): 90
+ matches(30,38): 144
+ matches(31,32): 315
+ matches(31,33): 159
+ matches(32,33): 681
+ matches(32,34): 256
+ matches(32,35): 111
+ matches(33,34): 770
+ matches(33,35): 284
+ matches(33,36): 137
+ matches(34,35): 675
+ matches(34,36): 248
+ matches(35,36): 736
+ matches(35,37): 148
+ matches(36,37): 507
+
+4. Global SfM
+
+-----------------------------------------------------------
+Global Structure from Motion:
+-----------------------------------------------------------
+Open Source implementation of the paper:
+"Global Fusion of Relative Motions for Robust, Accurate and Scalable Structure from Motion."
+Pierre Moulon, Pascal Monasse and Renaud Marlet.  ICCV 2013.
+------------------------------------------------------------
+
+- Features Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+CleanGraph_KeepLargestBiEdge_Nodes():: => connected Component: 1
+Connected component of size: 38
+
+- Relative pose computation -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+-------------------------------
+ Global rotations computation: 
+  #relative rotations: 145
+  #global rotations: 38
+Found #global_rotations: 38
+Timing: 0.009 seconds
+
+Relative/Global degree rotations residual errors {0,21.23}:
+
+0	|	83
+1.06	|	38
+2.12	|	7
+3.18	|	9
+4.25	|	4
+5.31	|	1
+6.37	|	1
+7.43	|	0
+8.49	|	0
+9.55	|	0
+10.6	|	0
+11.7	|	0
+12.7	|	0
+13.8	|	1
+14.9	|	0
+15.9	|	0
+17	|	0
+18	|	0
+19.1	|	0
+20.2	|	1
+21.2
+
+
+Relative/Global degree rotations residual errors {0,5}:
+
+0	|	10
+0.25	|	29
+0.5	|	23
+0.75	|	18
+1	|	17
+1.25	|	13
+1.5	|	4
+1.75	|	5
+2	|	3
+2.25	|	2
+2.5	|	2
+2.75	|	1
+3	|	1
+3.25	|	4
+3.5	|	3
+3.75	|	1
+4	|	1
+4.25	|	2
+4.5	|	0
+4.75	|	1
+5
+
+
+Statistics about global rotation evaluation:
+
+	 min: 0.12405
+	 mean: 1.48592
+	 median: 0.876143
+	 max: 21.23
+
+-------------------------------
+ Relative translations computation: 
+-------------------------------
+#Triplets: 227
+
+Relative translations computation (edge coverage algorithm)
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+TRIPLET COVERAGE TIMING:
+-------------------------------
+-- #Relative triplet of translations estimates: 108 computed from 227 triplets.
+-- resulting in 324 translations estimation.
+-- time to compute triplets of relative translations: 2.398 seconds.
+-------------------------------
+
+CleanGraph_KeepLargestBiEdge_Nodes():: => connected Component: 1
+Connected component of size: 38
+
+-------------------------------
+ Global translations computation: 
+   - Ready to compute 38 global translations.
+     from #relative translations: 324
+
+Track stats
+------------------
+-- Tracks Stats --
+ Tracks number: 6307
+ Images Id: 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 
+------------------
+TrackLength, Occurrence
+	3	3646
+	4	1310
+	5	656
+	6	337
+	7	172
+	8	76
+	9	35
+	10	34
+	11	18
+	12	12
+	13	4
+	14	3
+	15	1
+	16	3
+
+Blind triangulation progress:
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+#removed tracks (invalid triangulation): 0
+
+  Triangulation took (s): 0.003
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 38
+ #poses: 38
+ #intrinsics: 1
+ #tracks: 6307
+ #residuals: 48892
+ Initial RMSE: 1.55332
+ Final RMSE: 1.05922
+ Time (s): 0.244756
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 38
+ #poses: 38
+ #intrinsics: 1
+ #tracks: 6307
+ #residuals: 48892
+ Initial RMSE: 1.05922
+ Final RMSE: 0.958218
+ Time (s): 0.344265
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 38
+ #poses: 38
+ #intrinsics: 1
+ #tracks: 6307
+ #residuals: 48892
+ Initial RMSE: 0.942375
+ Final RMSE: 0.9333
+ Time (s): 0.510576
+
+Outlier removal (remaining #points):
+	 initial structure size #3DPoints: 6307
+		 pixel residual filter  #3DPoints: 6194
+		 angular filter         #3DPoints: 6185
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 38
+ #poses: 38
+ #intrinsics: 1
+ #tracks: 6024
+ #residuals: 46160
+ Initial RMSE: 0.5751
+ Final RMSE: 0.541104
+ Time (s): 0.371425
+
+
+ Total Ac-Global-Sfm took (s): 7.323
+...Generating SfM_Report.html
+...Export SfM_Data to disk.
+
+- EXTRACT UNDISTORTED IMAGES -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 0.5
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Adjusting bbox %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+You called:
+
+	--i     <input .ply file with raw structure>        sfm/structure_raw.ply
+	--o     <output .ply file with filtered structure>  sfm/structure_filt.ply
+	--bbox  <output txt file with bbox coordinates>     sfm/bbox_filt.txt
+	--knn   <amount of neighbor points (less than 1)>   0.3
+	--t     <deviation threshold>                       0.005
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% 3D reconstruction via depthmap fusion %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ _______________________________________________________________________________________
+|________________________________________rec3D__________________________________________
+|                                                                                       
+| You called:                                                                           
+|                                                                                       
+|	     --img     <input images directory>           undistort
+|	     --sfm     <input sfm directory>              sfm
+|	     --out     <output directory>                 rec3D
+|	     --s       <scale factor>                     1
+|	     --depth   <compute depth>                    ON
+|	     --tsdf    <compute distance fields>          OFF
+|	     --tvl2    <compute depth fusion with TVL2>   OFF
+|	     --tvl1    <compute depth fusion with TVL1>   OFF
+|	     --fast    <use TVL2 to initialize TVL1>      OFF
+|	     --debug   <debug mode>                       ON
+|_______________________________________________________________________________________
+
+Loading input data...
+
+Loading images...
+
+  undistort/00.jpg
+  undistort/01.jpg
+  undistort/02.jpg
+  undistort/03.jpg
+  undistort/04.jpg
+  undistort/05.jpg
+  undistort/06.jpg
+  undistort/07.jpg
+  undistort/08.jpg
+  undistort/09.jpg
+  undistort/10.jpg
+  undistort/11.jpg
+  undistort/12.jpg
+  undistort/13.jpg
+  undistort/14.jpg
+  undistort/15.jpg
+  undistort/16.jpg
+  undistort/17.jpg
+  undistort/18.jpg
+  undistort/19.jpg
+  undistort/20.jpg
+  undistort/21.jpg
+  undistort/22.jpg
+  undistort/23.jpg
+  undistort/24.jpg
+  undistort/25.jpg
+  undistort/26.jpg
+  undistort/27.jpg
+  undistort/28.jpg
+  undistort/29.jpg
+  undistort/30.jpg
+  undistort/31.jpg
+  undistort/32.jpg
+  undistort/33.jpg
+  undistort/34.jpg
+  undistort/35.jpg
+  undistort/36.jpg
+  undistort/37.jpg
+
+Loading cameras...
+
+  sfm/00_cam.txt
+  sfm/01_cam.txt
+  sfm/02_cam.txt
+  sfm/03_cam.txt
+  sfm/04_cam.txt
+  sfm/05_cam.txt
+  sfm/06_cam.txt
+  sfm/07_cam.txt
+  sfm/08_cam.txt
+  sfm/09_cam.txt
+  sfm/10_cam.txt
+  sfm/11_cam.txt
+  sfm/12_cam.txt
+  sfm/13_cam.txt
+  sfm/14_cam.txt
+  sfm/15_cam.txt
+  sfm/16_cam.txt
+  sfm/17_cam.txt
+  sfm/18_cam.txt
+  sfm/19_cam.txt
+  sfm/20_cam.txt
+  sfm/21_cam.txt
+  sfm/22_cam.txt
+  sfm/23_cam.txt
+  sfm/24_cam.txt
+  sfm/25_cam.txt
+  sfm/26_cam.txt
+  sfm/27_cam.txt
+  sfm/28_cam.txt
+  sfm/29_cam.txt
+  sfm/30_cam.txt
+  sfm/31_cam.txt
+  sfm/32_cam.txt
+  sfm/33_cam.txt
+  sfm/34_cam.txt
+  sfm/35_cam.txt
+  sfm/36_cam.txt
+  sfm/37_cam.txt
+
+Loading bbox...
+
+  Raw bbox: 
+    - Voxel resolution: 0.0339072
+    - Grid dimensions: 128x380x207 voxels
+    - Number of voxels: 10068480
+  Filtered bbox: 
+    - Voxel resolution: 0.00569653
+    - Grid dimensions: 278x175x207 voxels
+    - Number of voxels: 10070550
+
+Resizing input images...
+
+  Scale factor: 1
+  Original (w,h): (700,525)
+  New (w,h): (700,525)
+
+Loading input data took: 0 min 0.643282 s
+
+
+Computing depthmaps...
+
+You called:
+
+	--mask    <use masks>                        OFF
+	--planes  <number of frontoparallel planes>  150
+	--wsize   <window size>                      13
+	--cost    <similarity measure: NCC|SSD|SAD>  SAD
+	--conf    <minimum depth confidence>         0.3
+ 
+  (0,27) min depth: 0.936549 max depth: 2.17817
+  (1,0) min depth: 0.893706 max depth: 2.27218
+  (2,3) min depth: 0.863031 max depth: 2.33187
+  (3,4) min depth: 0.871703 max depth: 2.40946
+  (4,5) min depth: 0.816442 max depth: 2.44684
+  (5,3) min depth: 0.781791 max depth: 2.4807
+  (6,5) min depth: 0.750566 max depth: 2.54266
+  (7,8) min depth: 0.853961 max depth: 2.52087
+  (8,9) min depth: 0.645167 max depth: 2.53567
+  (9,10) min depth: 0.616766 max depth: 2.6955
+  (10,11) min depth: 0.479814 max depth: 2.65291
+  (11,12) min depth: 0.435049 max depth: 2.6282
+  (12,13) min depth: 0.439958 max depth: 2.58313
+  (13,14) min depth: 0.389087 max depth: 2.33375
+  (14,15) min depth: 0.382457 max depth: 2.37303
+  (15,16) min depth: 0.375802 max depth: 2.50123
+  (16,17) min depth: 0.289176 max depth: 2.47005
+  (17,18) min depth: 0.274638 max depth: 2.4433
+  (18,19) min depth: 0.302472 max depth: 2.44471
+  (19,17) min depth: 0.314021 max depth: 2.38493
+  (20,21) min depth: 0.358498 max depth: 2.29077
+  (21,22) min depth: 0.377758 max depth: 2.21999
+  (22,23) min depth: 0.614052 max depth: 2.13412
+  (23,24) min depth: 0.586741 max depth: 2.09394
+  (24,25) min depth: 0.535424 max depth: 1.97172
+  (25,26) min depth: 0.578627 max depth: 2.17009
+  (26,29) min depth: 0.55068 max depth: 2.22509
+  (27,37) min depth: 0.907061 max depth: 2.16332
+  (28,37) min depth: 0.773377 max depth: 2.20331
+  (29,28) min depth: 0.512857 max depth: 2.21306
+  (30,31) min depth: 0.432629 max depth: 2.5213
+  (31,32) min depth: 0.484881 max depth: 2.48166
+  (32,33) min depth: 0.343999 max depth: 2.44918
+  (33,34) min depth: 0.279603 max depth: 2.36956
+  (34,35) min depth: 0.287233 max depth: 2.24973
+  (35,36) min depth: 0.352406 max depth: 2.3116
+  (36,23) min depth: 0.335326 max depth: 2.32622
+  (37,0) min depth: 0.7844 max depth: 2.09443
+
+Depthmaps successfully computed and stored at rec3D/depth
+
+Computing depthmaps took: 0 min 42.7998 s
+
+ _______________________________________________________________________________________
+|________________________________________rec3D__________________________________________
+|                                                                                       
+| You called:                                                                           
+|                                                                                       
+|	     --img     <input images directory>           undistort
+|	     --sfm     <input sfm directory>              sfm
+|	     --out     <output directory>                 rec3D
+|	     --s       <scale factor>                     1
+|	     --depth   <compute depth>                    OFF
+|	     --tsdf    <compute distance fields>          ON
+|	     --tvl2    <compute depth fusion with TVL2>   OFF
+|	     --tvl1    <compute depth fusion with TVL1>   OFF
+|	     --fast    <use TVL2 to initialize TVL1>      OFF
+|	     --debug   <debug mode>                       OFF
+|_______________________________________________________________________________________
+
+
+
+Computing distance fields...
+
+You called:
+
+	--voxels  <number of voxels in the bbox>     1e+07
+	--delta   <delta>                            0.02
+	--eta     <eta>                              0.3
+
+Distance fields successfully computed and stored at rec3D/tsdf
+
+Computing distance fields took: 5 min 40.4308 s
+
+ _______________________________________________________________________________________
+|________________________________________rec3D__________________________________________
+|                                                                                       
+| You called:                                                                           
+|                                                                                       
+|	     --img     <input images directory>           undistort
+|	     --sfm     <input sfm directory>              sfm
+|	     --out     <output directory>                 rec3D
+|	     --s       <scale factor>                     1
+|	     --depth   <compute depth>                    OFF
+|	     --tsdf    <compute distance fields>          OFF
+|	     --tvl2    <compute depth fusion with TVL2>   OFF
+|	     --tvl1    <compute depth fusion with TVL1>   ON
+|	     --fast    <use TVL2 to initialize TVL1>      OFF
+|	     --debug   <debug mode>                       OFF
+|_______________________________________________________________________________________
+
+
+
+Computing depth fusion with TVL1...
+
+You called:
+
+	--lambda  <lambda>                           0.02
+	--theta   <theta>                            0.25
+	--tau     <tau>                              0.15
+	--maxit   <maximum iterations>               50
+
+  Algorithm converged in 40 iterations
+  Energy decreased less than 1% in 5 consecutive iterations
+
+Depth fusion with TVL1 successfully computed and stored at rec3D/tvl1
+
+Computing depth fusion with TVL1 took: 21 min 12.3441 s
+
+ _______________________________________________________________________________________
+|________________________________________rec3D__________________________________________
+|                                                                                       
+| You called:                                                                           
+|                                                                                       
+|	     --img     <input images directory>           undistort
+|	     --sfm     <input sfm directory>              sfm
+|	     --out     <output directory>                 rec3D
+|	     --s       <scale factor>                     1
+|	     --depth   <compute depth>                    OFF
+|	     --tsdf    <compute distance fields>          OFF
+|	     --tvl2    <compute depth fusion with TVL2>   ON
+|	     --tvl1    <compute depth fusion with TVL1>   OFF
+|	     --fast    <use TVL2 to initialize TVL1>      OFF
+|	     --debug   <debug mode>                       OFF
+|_______________________________________________________________________________________
+
+
+
+Computing depth fusion with TVL2...
+
+You called:
+
+	--lambda  <lambda>                           0.02
+	--theta   <theta>                            0.25
+	--tau     <tau>                              0.15
+	--maxit   <maximum iterations>               50
+
+  Algorithm converged in 17 iterations
+  Energy decreased less than 1% in 5 consecutive iterations
+
+Depth fusion with TVL2 successfully computed and stored at rec3D/tvl2
+
+Computing depth fusion with TVL2 took: 6 min 27.8879 s
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Mesh extraction with marching cubes %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Extracting TVL1 mesh...
+
+You called:
+
+	--i        <input .vtk file containing iso-surface>      tvl1/tvl1.vtk
+	--o        <output .ply file>                            tvl1/tvl1_mesh.ply
+	--iso      <marching cubes threshold between 0 and 255>  50
+	--largest  <keep only largest continuous region>         OFF
+
+Running marching cubes...
+
+  Output mesh contains 141794 vertices and 282299 triangular faces
+
+Marching cubes successfully completed in 0 min 1.77788 s
+
+
+Extracting TVL2 mesh...
+
+You called:
+
+	--i        <input .vtk file containing iso-surface>      tvl2/tvl2.vtk
+	--o        <output .ply file>                            tvl2/tvl2_mesh.ply
+	--iso      <marching cubes threshold between 0 and 255>  50
+	--largest  <keep only largest continuous region>         OFF
+
+Running marching cubes...
+
+  Output mesh contains 156071 vertices and 310489 triangular faces
+
+Marching cubes successfully completed in 0 min 1.71044 s
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Painting mesh %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Painting TVL1 mesh...
+
+
+You called:
+
+	--i       <input .ply file containing input mesh>  tvl1/tvl1_mesh.ply
+	--o       <output directory>                       tvl1
+	--img     <txt file with images paths>             images.txt
+	--bbox    <txt file with grid details>             grid.txt
+	--cam     <txt file with camera paths>             cameras.txt
+	--method  <painting method: 'mean' or 'median'>    median
+        --debug   <debug mode (saves synthetic depths)>    OFF
+Difference margin: 0.01
+Iteration: 1
+Non painted vertices: 14854
+Difference margin: 0.02
+Iteration: 2
+Non painted vertices: 3508
+Difference margin: 0.04
+Iteration: 3
+Non painted vertices: 2746
+Difference margin: 0.08
+Iteration: 4
+Non painted vertices: 2331
+Difference margin: 0.16
+Iteration: 5
+Non painted vertices: 1149
+Difference margin: 0.32
+Iteration: 6
+Non painted vertices: 139
+Difference margin: 0.64
+Iteration: 7
+Non painted vertices: 0
+
+Total execution time took: 0 min 17.6398 s
+
+
+Painting TVL2 mesh...
+
+
+You called:
+
+	--i       <input .ply file containing input mesh>  tvl2/tvl2_mesh.ply
+	--o       <output directory>                       tvl2
+	--img     <txt file with images paths>             images.txt
+	--bbox    <txt file with grid details>             grid.txt
+	--cam     <txt file with camera paths>             cameras.txt
+	--method  <painting method: 'mean' or 'median'>    median
+        --debug   <debug mode (saves synthetic depths)>    OFF
+Difference margin: 0.01
+Iteration: 1
+Non painted vertices: 24634
+Difference margin: 0.02
+Iteration: 2
+Non painted vertices: 6637
+Difference margin: 0.04
+Iteration: 3
+Non painted vertices: 4280
+Difference margin: 0.08
+Iteration: 4
+Non painted vertices: 3229
+Difference margin: 0.16
+Iteration: 5
+Non painted vertices: 2889
+Difference margin: 0.32
+Iteration: 6
+Non painted vertices: 722
+Difference margin: 0.64
+Iteration: 7
+Non painted vertices: 0
+
+Total execution time took: 0 min 19.7998 s
+
+
+... 3D reconstruction ended successfully!
