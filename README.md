@@ -70,7 +70,7 @@ If you find this software or some part of it useful, please cite it as:
   @misc{mari2017depthfusion,
     author = "Roger Mar{\'i}",
     title = "Multi-view 3D Reconstruction via Depth Map Fusion for a Smartphone Application",
-    year = 2017,
+    year = "2017",
     howpublished = "\url{https://github.com/rogermm14/rec3D}" 
   }
 ```
