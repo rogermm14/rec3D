@@ -1,0 +1,14 @@
+../sfm/IMG_1098_cam.txt
+../sfm/IMG_1099_cam.txt
+../sfm/IMG_1100_cam.txt
+../sfm/IMG_1101_cam.txt
+../sfm/IMG_1102_cam.txt
+../sfm/IMG_1103_cam.txt
+../sfm/IMG_1104_cam.txt
+../sfm/IMG_1105_cam.txt
+../sfm/IMG_1106_cam.txt
+../sfm/IMG_1107_cam.txt
+../sfm/IMG_1108_cam.txt
+../sfm/IMG_1109_cam.txt
+../sfm/IMG_1110_cam.txt
+../sfm/IMG_1111_cam.txt
