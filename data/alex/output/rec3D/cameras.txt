@@ -1,0 +1,12 @@
+../sfm/IMG_1112_cam.txt
+../sfm/IMG_1113_cam.txt
+../sfm/IMG_1114_cam.txt
+../sfm/IMG_1115_cam.txt
+../sfm/IMG_1116_cam.txt
+../sfm/IMG_1117_cam.txt
+../sfm/IMG_1118_cam.txt
+../sfm/IMG_1119_cam.txt
+../sfm/IMG_1120_cam.txt
+../sfm/IMG_1121_cam.txt
+../sfm/IMG_1122_cam.txt
+../sfm/IMG_1123_cam.txt
