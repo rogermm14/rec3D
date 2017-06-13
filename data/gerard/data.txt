@@ -1,0 +1,833 @@
+Starting 3D reconstruction ...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Resizing input images %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Resizing input images...
+ 
+Resizing image  IMG_1098.JPG  (exif data found)
+Resizing image  IMG_1099.JPG  (exif data found)
+Resizing image  IMG_1100.JPG  (exif data found)
+Resizing image  IMG_1101.JPG  (exif data found)
+Resizing image  IMG_1102.JPG  (exif data found)
+Resizing image  IMG_1103.JPG  (exif data found)
+Resizing image  IMG_1104.JPG  (exif data found)
+Resizing image  IMG_1105.JPG  (exif data found)
+Resizing image  IMG_1106.JPG  (exif data found)
+Resizing image  IMG_1107.JPG  (exif data found)
+Resizing image  IMG_1108.JPG  (exif data found)
+Resizing image  IMG_1109.JPG  (exif data found)
+Resizing image  IMG_1110.JPG  (exif data found)
+Resizing image  IMG_1111.JPG  (exif data found)
+
+Resizing images completed in  1.87555003166  (s)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% SfM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Input dir  : /home/usuario/TFG_Data/gerard/output/resize
+Output_dir : /home/usuario/TFG_Data/gerard/output/openmvg
+
+Input parameters:
+	SfM method              : global
+	Describer method        : AKAZE_FLOAT
+	Describer search        : ULTRA
+	Matching method         : FASTCASCADEHASHINGL2
+	Geometric model         : ESSENTIAL
+
+1. Intrinsics analysis
+ You called : 
+/home/usuario/openMVG_Build/Linux-x86_64-RELEASE/openMVG_main_SfMInit_ImageListing
+--imageDirectory /home/usuario/TFG_Data/gerard/output/resize
+--sensorWidthDatabase /home/usuario/openMVG/src/openMVG/exif/sensor_width_database/sensor_width_camera_database.txt
+--outputDirectory /home/usuario/TFG_Data/gerard/output/openmvg/matches
+--focal -1
+--intrinsics 
+--camera_model 3
+--group_camera_model 1
+
+- Image listing -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+SfMInit_ImageListing report:
+listed #File(s): 14
+usable #File(s) listed in sfm_data: 14
+usable #Intrinsic(s) listed in sfm_data: 1
+
+2. Compute features
+ You called : 
+/home/usuario/openMVG_Build/Linux-x86_64-RELEASE/openMVG_main_ComputeFeatures
+--input_file /home/usuario/TFG_Data/gerard/output/openmvg/matches/sfm_data.json
+--outdir /home/usuario/TFG_Data/gerard/output/openmvg/matches
+--describerMethod AKAZE_FLOAT
+--upright 0
+--describerPreset ULTRA
+--force 0
+--writeFiles 1
+--numThreads 8
+
+-----> Using OPENMP: 4 threads
+
+- EXTRACT FEATURES -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+
+ features: 4232
+***
+ features: 4434
+****
+ features: 4306
+***
+ features: 4279
+****
+ features: 4389
+***
+ features: 4609
+****
+ features: 4448
+****
+ features: 4250
+***
+ features: 4551
+****
+ features: 4464
+***
+ features: 4332
+****
+ features: 4094
+***
+ features: 4335
+****
+ features: 4082
+*****
+Average number of features per image is 4343.21
+Task done in (s): 7.887
+
+3. Compute matches
+ You called : 
+/home/usuario/openMVG_Build/Linux-x86_64-RELEASE/openMVG_main_ComputeMatches
+--input_file /home/usuario/TFG_Data/gerard/output/openmvg/matches/sfm_data.json
+--out_dir /home/usuario/TFG_Data/gerard/output/openmvg/matches
+Optional parameters:
+--force 0
+--ratio 0.8
+--geometric_model e
+--video_mode_matching -1
+--pair_list 
+--nearest_matching_method FASTCASCADEHASHINGL2
+--guided_matching 0
+--cache_size unlimited
+--writeFiles 1
+
+- Regions Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+ - PUTATIVE MATCHES - 
+Use: exhaustive pairwise matching
+Using FAST_CASCADE_HASHING_L2 matcher
+Using the OPENMP thread interface
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+ matches(1,2): 1414
+ matches(1,3): 643
+ matches(1,4): 437
+ matches(1,5): 416
+ matches(1,6): 600
+ matches(1,7): 1082
+ matches(1,8): 1208
+ matches(1,9): 567
+ matches(1,10): 362
+ matches(1,11): 406
+ matches(1,12): 514
+ matches(1,13): 765
+ matches(1,14): 1327
+ matches(2,3): 1044
+ matches(2,4): 590
+ matches(2,5): 566
+ matches(2,6): 900
+ matches(2,7): 1455
+ matches(2,8): 783
+ matches(2,9): 391
+ matches(2,10): 335
+ matches(2,11): 331
+ matches(2,12): 395
+ matches(2,13): 521
+ matches(2,14): 827
+ matches(3,4): 1225
+ matches(3,5): 957
+ matches(3,6): 1332
+ matches(3,7): 881
+ matches(3,8): 448
+ matches(3,9): 356
+ matches(3,10): 293
+ matches(3,11): 308
+ matches(3,12): 330
+ matches(3,13): 350
+ matches(3,14): 478
+ matches(4,5): 1377
+ matches(4,6): 1019
+ matches(4,7): 542
+ matches(4,8): 359
+ matches(4,9): 297
+ matches(4,10): 275
+ matches(4,11): 288
+ matches(4,12): 300
+ matches(4,13): 313
+ matches(4,14): 345
+ matches(5,6): 1291
+ matches(5,7): 652
+ matches(5,8): 348
+ matches(5,9): 296
+ matches(5,10): 274
+ matches(5,11): 310
+ matches(5,12): 289
+ matches(5,13): 306
+ matches(5,14): 323
+ matches(6,7): 1118
+ matches(6,8): 439
+ matches(6,9): 355
+ matches(6,10): 285
+ matches(6,11): 305
+ matches(6,12): 320
+ matches(6,13): 345
+ matches(6,14): 420
+ matches(7,8): 968
+ matches(7,9): 499
+ matches(7,10): 365
+ matches(7,11): 331
+ matches(7,12): 361
+ matches(7,13): 461
+ matches(7,14): 650
+ matches(8,9): 966
+ matches(8,10): 583
+ matches(8,11): 490
+ matches(8,12): 574
+ matches(8,13): 933
+ matches(8,14): 1400
+ matches(9,10): 1235
+ matches(9,11): 847
+ matches(9,12): 1105
+ matches(9,13): 1231
+ matches(9,14): 753
+ matches(10,11): 1318
+ matches(10,12): 1037
+ matches(10,13): 699
+ matches(10,14): 493
+ matches(11,12): 1528
+ matches(11,13): 789
+ matches(11,14): 555
+ matches(12,13): 1225
+ matches(12,14): 660
+ matches(13,14): 1204
+Task (Regions Matching) done in (s): 1.785
+
+ - Geometric filtering - 
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 1.168
+
+ Export Adjacency Matrix of the pairwise's geometric matches
+ matches(1,2): 908
+ matches(1,3): 362
+ matches(1,4): 195
+ matches(1,5): 156
+ matches(1,6): 325
+ matches(1,7): 784
+ matches(1,8): 929
+ matches(1,9): 329
+ matches(1,10): 139
+ matches(1,11): 164
+ matches(1,12): 229
+ matches(1,13): 482
+ matches(1,14): 1101
+ matches(2,3): 527
+ matches(2,4): 311
+ matches(2,5): 322
+ matches(2,6): 562
+ matches(2,7): 1157
+ matches(2,8): 536
+ matches(2,9): 150
+ matches(2,12): 130
+ matches(2,13): 239
+ matches(2,14): 556
+ matches(3,4): 896
+ matches(3,5): 689
+ matches(3,6): 987
+ matches(3,7): 584
+ matches(3,8): 189
+ matches(3,13): 116
+ matches(3,14): 219
+ matches(4,5): 1042
+ matches(4,6): 643
+ matches(4,7): 319
+ matches(4,14): 105
+ matches(5,6): 927
+ matches(5,7): 375
+ matches(5,8): 108
+ matches(6,7): 818
+ matches(6,8): 207
+ matches(6,14): 158
+ matches(7,8): 690
+ matches(7,9): 217
+ matches(7,13): 215
+ matches(7,14): 419
+ matches(8,9): 680
+ matches(8,10): 332
+ matches(8,11): 235
+ matches(8,12): 318
+ matches(8,13): 680
+ matches(8,14): 1100
+ matches(9,10): 893
+ matches(9,11): 563
+ matches(9,12): 780
+ matches(9,13): 969
+ matches(9,14): 496
+ matches(10,11): 1057
+ matches(10,12): 764
+ matches(10,13): 433
+ matches(10,14): 226
+ matches(11,12): 1107
+ matches(11,13): 470
+ matches(11,14): 273
+ matches(12,13): 831
+ matches(12,14): 417
+ matches(13,14): 690
+
+4. Global SfM
+
+-----------------------------------------------------------
+Global Structure from Motion:
+-----------------------------------------------------------
+Open Source implementation of the paper:
+"Global Fusion of Relative Motions for Robust, Accurate and Scalable Structure from Motion."
+Pierre Moulon, Pascal Monasse and Renaud Marlet.  ICCV 2013.
+------------------------------------------------------------
+
+- Features Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+CleanGraph_KeepLargestBiEdge_Nodes():: => connected Component: 1
+Connected component of size: 14
+
+- Relative pose computation -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+-------------------------------
+ Global rotations computation: 
+  #relative rotations: 65
+  #global rotations: 14
+Found #global_rotations: 14
+Timing: 0.001 seconds
+
+Relative/Global degree rotations residual errors {0,6.39626}:
+
+0	|	4
+0.32	|	26
+0.64	|	17
+0.959	|	6
+1.28	|	3
+1.6	|	2
+1.92	|	0
+2.24	|	1
+2.56	|	1
+2.88	|	0
+3.2	|	2
+3.52	|	1
+3.84	|	0
+4.16	|	0
+4.48	|	1
+4.8	|	0
+5.12	|	0
+5.44	|	0
+5.76	|	0
+6.08	|	0
+6.4
+
+
+Relative/Global degree rotations residual errors {0,5}:
+
+0	|	2
+0.25	|	18
+0.5	|	19
+0.75	|	10
+1	|	4
+1.25	|	3
+1.5	|	0
+1.75	|	2
+2	|	0
+2.25	|	1
+2.5	|	1
+2.75	|	0
+3	|	1
+3.25	|	1
+3.5	|	1
+3.75	|	0
+4	|	0
+4.25	|	0
+4.5	|	1
+4.75	|	0
+5
+
+
+Statistics about global rotation evaluation:
+
+	 min: 0.117877
+	 mean: 1.0323
+	 median: 0.665065
+	 max: 6.39626
+
+-------------------------------
+ Relative translations computation: 
+-------------------------------
+#Triplets: 151
+
+Relative translations computation (edge coverage algorithm)
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+TRIPLET COVERAGE TIMING:
+-------------------------------
+-- #Relative triplet of translations estimates: 44 computed from 151 triplets.
+-- resulting in 132 translations estimation.
+-- time to compute triplets of relative translations: 1.039 seconds.
+-------------------------------
+
+CleanGraph_KeepLargestBiEdge_Nodes():: => connected Component: 1
+Connected component of size: 14
+
+-------------------------------
+ Global translations computation: 
+   - Ready to compute 14 global translations.
+     from #relative translations: 132
+
+Track stats
+------------------
+-- Tracks Stats --
+ Tracks number: 3078
+ Images Id: 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
+------------------
+TrackLength, Occurrence
+	3	1535
+	4	564
+	5	415
+	6	241
+	7	138
+	8	79
+	9	52
+	10	33
+	11	7
+	12	8
+	13	2
+	14	4
+
+Blind triangulation progress:
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+#removed tracks (invalid triangulation): 0
+
+  Triangulation took (s): 0.002
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 14
+ #poses: 14
+ #intrinsics: 1
+ #tracks: 3078
+ #residuals: 26066
+ Initial RMSE: 1.28774
+ Final RMSE: 1.1377
+ Time (s): 0.0928935
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 14
+ #poses: 14
+ #intrinsics: 1
+ #tracks: 3078
+ #residuals: 26066
+ Initial RMSE: 1.1377
+ Final RMSE: 1.05667
+ Time (s): 0.141614
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 14
+ #poses: 14
+ #intrinsics: 1
+ #tracks: 3078
+ #residuals: 26066
+ Initial RMSE: 1.02303
+ Final RMSE: 0.978276
+ Time (s): 0.619391
+
+Outlier removal (remaining #points):
+	 initial structure size #3DPoints: 3078
+		 pixel residual filter  #3DPoints: 3006
+		 angular filter         #3DPoints: 3006
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 14
+ #poses: 14
+ #intrinsics: 1
+ #tracks: 2943
+ #residuals: 24734
+ Initial RMSE: 0.573834
+ Final RMSE: 0.543629
+ Time (s): 0.203544
+
+
+ Total Ac-Global-Sfm took (s): 3.836
+...Generating SfM_Report.html
+...Export SfM_Data to disk.
+
+- EXTRACT UNDISTORTED IMAGES -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 0.227
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Adjusting bbox %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+You called:
+
+	--i     <input .ply file with raw structure>        sfm/structure_raw.ply
+	--o     <output .ply file with filtered structure>  sfm/structure_filt.ply
+	--bbox  <output txt file with bbox coordinates>     sfm/bbox_filt.txt
+	--knn   <amount of neighbor points (less than 1)>   0.2
+	--t     <deviation threshold>                       1
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% 3D reconstruction via depthmap fusion %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ _______________________________________________________________________________________
+|________________________________________rec3D__________________________________________
+|                                                                                       
+| You called:                                                                           
+|                                                                                       
+|	     --img     <input images directory>           undistort
+|	     --sfm     <input sfm directory>              sfm
+|	     --out     <output directory>                 rec3D
+|	     --s       <scale factor>                     1
+|	     --depth   <compute depth>                    ON
+|	     --tsdf    <compute distance fields>          OFF
+|	     --tvl2    <compute depth fusion with TVL2>   OFF
+|	     --tvl1    <compute depth fusion with TVL1>   OFF
+|	     --fast    <use TVL2 to initialize TVL1>      OFF
+|	     --debug   <debug mode>                       ON
+|_______________________________________________________________________________________
+
+Loading input data...
+
+Loading images...
+
+  undistort/IMG_1098.jpg
+  undistort/IMG_1099.jpg
+  undistort/IMG_1100.jpg
+  undistort/IMG_1101.jpg
+  undistort/IMG_1102.jpg
+  undistort/IMG_1103.jpg
+  undistort/IMG_1104.jpg
+  undistort/IMG_1105.jpg
+  undistort/IMG_1106.jpg
+  undistort/IMG_1107.jpg
+  undistort/IMG_1108.jpg
+  undistort/IMG_1109.jpg
+  undistort/IMG_1110.jpg
+  undistort/IMG_1111.jpg
+
+Loading cameras...
+
+  sfm/IMG_1098_cam.txt
+  sfm/IMG_1099_cam.txt
+  sfm/IMG_1100_cam.txt
+  sfm/IMG_1101_cam.txt
+  sfm/IMG_1102_cam.txt
+  sfm/IMG_1103_cam.txt
+  sfm/IMG_1104_cam.txt
+  sfm/IMG_1105_cam.txt
+  sfm/IMG_1106_cam.txt
+  sfm/IMG_1107_cam.txt
+  sfm/IMG_1108_cam.txt
+  sfm/IMG_1109_cam.txt
+  sfm/IMG_1110_cam.txt
+  sfm/IMG_1111_cam.txt
+
+Loading bbox...
+
+  Raw bbox: 
+    - Voxel resolution: 0.005
+    - Grid dimensions: 218x207x120 voxels
+    - Number of voxels: 5415120
+  Filtered bbox: 
+    - Voxel resolution: 0.005
+    - Grid dimensions: 234x203x118 voxels
+    - Number of voxels: 5605236
+
+Resizing input images...
+
+  Scale factor: 1
+  Original (w,h): (700,525)
+  New (w,h): (700,525)
+
+Loading input data took: 0 min 0.326421 s
+
+
+Computing depthmaps...
+
+You called:
+
+	--mask    <use masks>                        OFF
+	--planes  <number of frontoparallel planes>  150
+	--wsize   <window size>                      13
+	--cost    <similarity measure: NCC|SSD|SAD>  SAD
+	--conf    <minimum depth confidence>         0.3
+ 
+  (0,13) min depth: 1.12126 max depth: 1.7267
+  (1,0) min depth: 1.05462 max depth: 1.78191
+  (2,5) min depth: 0.941865 max depth: 1.85112
+  (3,4) min depth: 0.844135 max depth: 1.88808
+  (4,5) min depth: 0.900694 max depth: 2.06304
+  (5,6) min depth: 0.870543 max depth: 1.93982
+  (6,1) min depth: 0.91082 max depth: 1.81111
+  (7,13) min depth: 0.971199 max depth: 1.7968
+  (8,9) min depth: 0.847583 max depth: 1.85867
+  (9,10) min depth: 0.824077 max depth: 1.97943
+  (10,11) min depth: 0.829439 max depth: 1.83891
+  (11,12) min depth: 0.845129 max depth: 1.80066
+  (12,13) min depth: 0.944794 max depth: 1.79001
+  (13,1) min depth: 0.998842 max depth: 1.71786
+
+Depthmaps successfully computed and stored at rec3D/depth
+
+Computing depthmaps took: 0 min 14.9211 s
+
+ _______________________________________________________________________________________
+|________________________________________rec3D__________________________________________
+|                                                                                       
+| You called:                                                                           
+|                                                                                       
+|	     --img     <input images directory>           undistort
+|	     --sfm     <input sfm directory>              sfm
+|	     --out     <output directory>                 rec3D
+|	     --s       <scale factor>                     1
+|	     --depth   <compute depth>                    OFF
+|	     --tsdf    <compute distance fields>          ON
+|	     --tvl2    <compute depth fusion with TVL2>   OFF
+|	     --tvl1    <compute depth fusion with TVL1>   OFF
+|	     --fast    <use TVL2 to initialize TVL1>      OFF
+|	     --debug   <debug mode>                       OFF
+|_______________________________________________________________________________________
+
+
+Computing distance fields...
+
+You called:
+
+	--voxels  <number of voxels in the bbox>     1e+07
+	--delta   <delta>                            0.01
+	--eta     <eta>                              0.2
+
+Distance fields successfully computed and stored at rec3D/tsdf
+
+Computing distance fields took: 1 min 1.5692 s
+
+ _______________________________________________________________________________________
+|________________________________________rec3D__________________________________________
+|                                                                                       
+| You called:                                                                           
+|                                                                                       
+|	     --img     <input images directory>           undistort
+|	     --sfm     <input sfm directory>              sfm
+|	     --out     <output directory>                 rec3D
+|	     --s       <scale factor>                     1
+|	     --depth   <compute depth>                    OFF
+|	     --tsdf    <compute distance fields>          OFF
+|	     --tvl2    <compute depth fusion with TVL2>   OFF
+|	     --tvl1    <compute depth fusion with TVL1>   ON
+|	     --fast    <use TVL2 to initialize TVL1>      OFF
+|	     --debug   <debug mode>                       OFF
+|_______________________________________________________________________________________
+
+Computing depth fusion with TVL1...
+
+You called:
+
+	--lambda  <lambda>                           0.1
+	--theta   <theta>                            0.25
+	--tau     <tau>                              0.15
+	--maxit   <maximum iterations>               50
+
+  Algorithm converged in 29 iterations
+  Energy decreased less than 1% in 5 consecutive iterations
+
+Depth fusion with TVL1 successfully computed and stored at rec3D/tvl1
+
+Computing depth fusion with TVL1 took: 5 min 50.6175 s
+
+ _______________________________________________________________________________________
+|________________________________________rec3D__________________________________________
+|                                                                                       
+| You called:                                                                           
+|                                                                                       
+|	     --img     <input images directory>           undistort
+|	     --sfm     <input sfm directory>              sfm
+|	     --out     <output directory>                 rec3D
+|	     --s       <scale factor>                     1
+|	     --depth   <compute depth>                    OFF
+|	     --tsdf    <compute distance fields>          OFF
+|	     --tvl2    <compute depth fusion with TVL2>   ON
+|	     --tvl1    <compute depth fusion with TVL1>   OFF
+|	     --fast    <use TVL2 to initialize TVL1>      OFF
+|	     --debug   <debug mode>                       OFF
+|_______________________________________________________________________________________
+
+
+Computing depth fusion with TVL2...
+
+You called:
+
+	--lambda  <lambda>                           0.1
+	--theta   <theta>                            0.25
+	--tau     <tau>                              0.15
+	--maxit   <maximum iterations>               50
+
+  Algorithm converged in 15 iterations
+  Energy decreased less than 1% in 5 consecutive iterations
+
+Depth fusion with TVL2 successfully computed and stored at rec3D/tvl2
+
+Computing depth fusion with TVL2 took: 1 min 43.745 s
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Mesh extraction with marching cubes %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Extracting TVL1 mesh...
+
+You called:
+
+	--i        <input .vtk file containing iso-surface>      tvl1/tvl1.vtk
+	--o        <output .ply file>                            tvl1/tvl1_mesh.ply
+	--iso      <marching cubes threshold between 0 and 255>  50
+	--largest  <keep only largest continuous region>         OFF
+
+Running marching cubes...
+
+  Output mesh contains 122509 vertices and 242926 triangular faces
+
+Marching cubes successfully completed in 0 min 1.2023 s
+
+
+Extracting TVL2 mesh...
+
+You called:
+
+	--i        <input .vtk file containing iso-surface>      tvl2/tvl2.vtk
+	--o        <output .ply file>                            tvl2/tvl2_mesh.ply
+	--iso      <marching cubes threshold between 0 and 255>  50
+	--largest  <keep only largest continuous region>         OFF
+
+Running marching cubes...
+
+  Output mesh contains 132925 vertices and 263010 triangular faces
+
+Marching cubes successfully completed in 0 min 1.26385 s
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Painting mesh %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Painting TVL1 mesh...
+
+
+You called:
+
+	--i       <input .ply file containing input mesh>  tvl1/tvl1_mesh.ply
+	--o       <output directory>                       tvl1
+	--img     <txt file with images paths>             images.txt
+	--bbox    <txt file with grid details>             grid.txt
+	--cam     <txt file with camera paths>             cameras.txt
+	--method  <painting method: 'mean' or 'median'>    median
+        --debug   <debug mode (saves synthetic depths)>    OFF
+Difference margin: 0.02
+Iteration: 1
+Non painted vertices: 52106
+Difference margin: 0.04
+Iteration: 2
+Non painted vertices: 37361
+Difference margin: 0.08
+Iteration: 3
+Non painted vertices: 32074
+Difference margin: 0.16
+Iteration: 4
+Non painted vertices: 28848
+Difference margin: 0.32
+Iteration: 5
+Non painted vertices: 0
+
+Total execution time took: 0 min 9.58251 s
+
+
+Painting TVL2 mesh...
+
+
+You called:
+
+	--i       <input .ply file containing input mesh>  tvl2/tvl2_mesh.ply
+	--o       <output directory>                       tvl2
+	--img     <txt file with images paths>             images.txt
+	--bbox    <txt file with grid details>             grid.txt
+	--cam     <txt file with camera paths>             cameras.txt
+	--method  <painting method: 'mean' or 'median'>    median
+        --debug   <debug mode (saves synthetic depths)>    OFF
+Difference margin: 0.02
+Iteration: 1
+Non painted vertices: 61525
+Difference margin: 0.04
+Iteration: 2
+Non painted vertices: 46183
+Difference margin: 0.08
+Iteration: 3
+Non painted vertices: 39991
+Difference margin: 0.16
+Iteration: 4
+Non painted vertices: 34784
+Difference margin: 0.32
+Iteration: 5
+Non painted vertices: 188
+Difference margin: 0.64
+Iteration: 6
+Non painted vertices: 0
+
+Total execution time took: 0 min 10.5017 s
+
+
+... 3D reconstruction ended successfully!
