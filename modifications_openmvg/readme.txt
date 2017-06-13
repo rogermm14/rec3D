@@ -1,0 +1,1 @@
+You will need to replace these files in the OpenMVG library to write the output camera matrices in the format required by the 3D reconstruction software. All files are located in the path src/software/SfM of the library.
