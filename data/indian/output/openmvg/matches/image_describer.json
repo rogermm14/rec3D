@@ -1,0 +1,33 @@
+{
+    "image_describer": {
+        "polymorphic_id": 2147483649,
+        "polymorphic_name": "AKAZE_Image_describer",
+        "ptr_wrapper": {
+            "valid": 1,
+            "data": {
+                "params": {
+                    "value0": {
+                        "iNbOctave": 4,
+                        "iNbSlicePerOctave": 4,
+                        "fSigma0": 1.600000023841858,
+                        "fThreshold": 0.000007999999979801942,
+                        "fDesc_factor": 1.0
+                    },
+                    "value1": 0
+                },
+                "bOrientation": true
+            }
+        }
+    },
+    "regions_type": {
+        "polymorphic_id": 2147483650,
+        "polymorphic_name": "AKAZE_Float_Regions",
+        "ptr_wrapper": {
+            "valid": 1,
+            "data": {
+                "value0": [],
+                "value1": []
+            }
+        }
+    }
+}
