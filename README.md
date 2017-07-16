@@ -12,7 +12,7 @@ Required tools:
 - C/C++ compiler
 
 Required external libraries:
-- OpenMVG (https://github.com/openMVG/openMVG) [1]
+- OpenMVG (https://github.com/openMVG/openMVG) **[1]**
 - OpenCV (https://github.com/opencv/opencv)
 - PCL (https://github.com/PointCloudLibrary/pcl)
 - VTK (https://github.com/Kitware/VTK)
@@ -60,9 +60,9 @@ To reconstruct a dataset:
 Citations
 ---------------------------------------------
 
-[1] Moulon Pierre, Monasse Pascal, Marlet Renaud, et al. (2013). OpenMVG: an Open Multiple View Geometry library.
+**[1]** Moulon Pierre, Monasse Pascal, Marlet Renaud, et al. (2013). OpenMVG: an Open Multiple View Geometry library.
 
-[2] Marí Roger (2017). Multi-view 3D Reconstruction via Depth Map Fusion for a Smartphone Application.
+**[2]** Marí Roger (2017). Multi-view 3D Reconstruction via Depth Map Fusion for a Smartphone Application.
 
 If you find this software or some part of it useful, please cite it as:
 
