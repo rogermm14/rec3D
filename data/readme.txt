@@ -1,1 +1,1 @@
-Copy in this folder your datasets
+Copy in this folder your datasets. All the sample results were obtained using a Toshiba Satellite L50-C-1DW laptop with a CPU of 4 cores and an Intel Core i7-5500U processor.
