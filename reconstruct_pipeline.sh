@@ -21,7 +21,7 @@ DATASET=$1
 BIN_PATH=$REC3D_PATH/binaries
 
 TVL1=true
-TVL2=true
+TVL2=false
 
 cd
 cd $REC3D_PATH/data/$DATASET
@@ -42,7 +42,7 @@ python -u $REC3D_PATH/python/resize.py 700
 echo; echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"; 
       echo "%%%%%% SfM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%";
       echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"; echo; 
-SFM_METHOD=global
+SFM_METHOD=incremental
 python -u $REC3D_PATH/python/sfm.py $SFM_METHOD AKAZE_FLOAT ULTRA FASTCASCADEHASHINGL2 ESSENTIAL
 mkdir -p undistort
 mkdir -p sfm
